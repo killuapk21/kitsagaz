@@ -1,9 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Heart, Gift, Star, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import PricingSection from './PricingSection';
 
 const LandingPage = () => {
   const handleCTAClick = () => {
@@ -88,6 +88,9 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+
+      {/* Pricing Section */}
+      <PricingSection />
 
       {/* Benefits Section */}
       <section className="bg-white py-12 sm:py-16">
