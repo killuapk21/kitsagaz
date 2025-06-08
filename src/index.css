@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -15,8 +16,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 343 89% 38%;
+    --primary-foreground: 0 0% 98%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -24,7 +25,7 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 43 96% 56%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
@@ -37,20 +38,19 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Custom colors for the landing page */
+    --natura-red: 343 89% 38%;
+    --natura-gold: 43 96% 56%;
+    --natura-dark: 0 0% 10%;
+    --luxury-gradient: linear-gradient(135deg, hsl(343 89% 38%) 0%, hsl(343 89% 28%) 100%);
   }
 
   .dark {
@@ -99,5 +99,35 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .luxury-gradient {
+    background: var(--luxury-gradient);
+  }
+  
+  .text-natura-red {
+    color: hsl(var(--natura-red));
+  }
+  
+  .bg-natura-red {
+    background-color: hsl(var(--natura-red));
+  }
+  
+  .text-natura-gold {
+    color: hsl(var(--natura-gold));
+  }
+  
+  .bg-natura-gold {
+    background-color: hsl(var(--natura-gold));
+  }
+  
+  .text-natura-dark {
+    color: hsl(var(--natura-dark));
+  }
+  
+  .bg-natura-dark {
+    background-color: hsl(var(--natura-dark));
   }
 }
