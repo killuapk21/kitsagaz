@@ -2,11 +2,18 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Timer, ShoppingCart, Zap } from 'lucide-react';
+import { Timer, ShoppingCart, Zap, MessageCircle } from 'lucide-react';
 
 const PricingSection = () => {
   const handleBuyClick = () => {
     window.open('https://www.natura.com.br/p/presente-natura-homem-sagaz-3-produtos/NATBRA-184883?position=1&listTitle=search+results+list+showcase+-+kit+sagaz&consultoria=jeffalvesconsultor', '_blank');
+  };
+
+  const handleWhatsAppClick = () => {
+    // Substitua 5511999999999 pelo seu número do WhatsApp com código do país
+    const phoneNumber = '5511993846894';
+    const message = encodeURIComponent('Olá! Tenho interesse no Kit Natura Homem Sagaz com desconto especial.');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   return (
@@ -67,10 +74,20 @@ const PricingSection = () => {
             {/* CTA Principal */}
             <Button 
               onClick={handleBuyClick}
-              className="w-full max-w-sm mx-auto h-12 sm:h-14 md:h-16 text-sm sm:text-base md:text-lg lg:text-xl font-bold luxury-gradient hover:bg-natura-red/90 text-white shadow-xl animate-pulse-gold px-4 sm:px-6 md:px-8"
+              className="w-full max-w-sm mx-auto h-12 sm:h-14 md:h-16 text-sm sm:text-base md:text-lg lg:text-xl font-bold luxury-gradient hover:bg-natura-red/90 text-white shadow-xl animate-pulse-gold px-4 sm:px-6 md:px-8 mb-4"
             >
               <ShoppingCart className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
               GARANTIR MINHA OFERTA
+            </Button>
+
+            {/* CTA WhatsApp */}
+            <Button 
+              onClick={handleWhatsAppClick}
+              variant="outline"
+              className="w-full max-w-sm mx-auto h-12 sm:h-14 text-sm sm:text-base md:text-lg font-semibold border-2 border-green-500 text-green-600 hover:bg-green-50 shadow-lg px-4 sm:px-6 md:px-8"
+            >
+              <MessageCircle className="mr-2 w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
+              FALAR NO WHATSAPP
             </Button>
 
             <p className="text-2xs sm:text-xs md:text-sm text-natura-dark/60 mt-3 sm:mt-4">

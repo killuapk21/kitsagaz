@@ -1,14 +1,19 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Heart, Gift, Star, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Heart, Gift, Star, Clock, CheckCircle2, ArrowRight, MessageCircle } from 'lucide-react';
 import PricingSection from './PricingSection';
 
 const LandingPage = () => {
   const handleCTAClick = () => {
     window.open('https://www.natura.com.br/p/presente-natura-homem-sagaz-3-produtos/NATBRA-184883?position=1&listTitle=search+results+list+showcase+-+kit+sagaz&consultoria=jeffalvesconsultor', '_blank');
+  };
+
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '5511999999999';
+    const message = encodeURIComponent('Olá! Tenho interesse no Kit Natura Homem Sagaz com desconto especial.');
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   const benefits = [
@@ -57,14 +62,23 @@ const LandingPage = () => {
                 </Badge>
               </div>
 
-              {/* CTA Button */}
-              <div className="px-2 sm:px-0">
+              {/* CTA Buttons */}
+              <div className="px-2 sm:px-0 space-y-3 sm:space-y-4">
                 <Button 
                   onClick={handleCTAClick}
                   className="w-full max-w-sm mx-auto lg:mx-0 h-11 sm:h-12 md:h-14 text-xs sm:text-sm md:text-base lg:text-lg font-bold luxury-gradient hover:bg-natura-red/90 text-white shadow-lg animate-pulse-gold px-3 sm:px-4 md:px-6"
                 >
                   COMPRAR COM DESCONTO ESPECIAL
                   <ArrowRight className="ml-1.5 sm:ml-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                </Button>
+
+                <Button 
+                  onClick={handleWhatsAppClick}
+                  variant="outline"
+                  className="w-full max-w-sm mx-auto lg:mx-0 h-11 sm:h-12 md:h-14 text-xs sm:text-sm md:text-base lg:text-lg font-semibold border-2 border-green-500 text-green-600 hover:bg-green-50 shadow-lg px-3 sm:px-4 md:px-6"
+                >
+                  <MessageCircle className="mr-1.5 sm:mr-2 w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5" />
+                  FALAR NO WHATSAPP
                 </Button>
               </div>
             </div>
