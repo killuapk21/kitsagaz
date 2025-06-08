@@ -8,7 +8,7 @@ import { Heart, Gift, Star, Clock, CheckCircle2, ArrowRight } from 'lucide-react
 const LandingPage = () => {
   const handleCTAClick = () => {
     // TODO: Replace this URL with your affiliate link
-    window.open('https://sua-url-de-afiliado-aqui.com', '_blank');
+    window.open('https://www.natura.com.br/p/presente-natura-homem-sagaz-3-produtos/NATBRA-184883?position=1&listTitle=search+results+list+showcase+-+kit+sagaz&consultoria=jeffalvesconsultor', '_blank');
   };
 
   const benefits = [
