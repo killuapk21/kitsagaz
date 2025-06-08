@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -18,13 +19,6 @@ const LandingPage = () => {
     "Embalagem especial com sacola de presente"
   ];
 
-  const kitItems = [
-    { item: "1 Deo Parfum 100ml", description: "Fragrância intensa e duradoura" },
-    { item: "1 Desodorante corporal 100ml", description: "Exclusivo da edição especial" },
-    { item: "1 Shampoo cabelo e corpo 100ml", description: "Exclusivo da edição especial" },
-    { item: "1 Sacola de presente P com laço", description: "Ref: 184883 - Pronta para presentear" }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-natura-red via-red-800 to-natura-dark overflow-x-hidden">
       {/* Hero Section */}
@@ -35,7 +29,7 @@ const LandingPage = () => {
             <div className="text-center lg:text-left animate-fade-in">
               <Badge className="mb-4 bg-natura-gold text-natura-dark hover:bg-natura-gold/90 text-sm font-semibold px-4 py-2">
                 <Heart className="w-4 h-4 mr-2" />
-                DIA DOS NAMORADOS 2024
+                DIA DOS NAMORADOS 2025
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -115,87 +109,11 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Kit Contents */}
-      <section className="bg-gray-50 py-16">
-        <div className="container mx-auto max-w-6xl px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-natura-dark mb-4">
-              O que Inclui no Kit Completo
-            </h2>
-            <Badge className="bg-natura-red text-white px-6 py-2 text-lg">
-              Presente Natura Homem Sagaz
-            </Badge>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {kitItems.map((item, index) => (
-              <Card key={index} className="p-6 hover:shadow-lg transition-shadow border-l-4 border-natura-red">
-                <CardContent className="p-0">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-natura-red text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-natura-dark mb-1">
-                        {item.item}
-                      </h3>
-                      <p className="text-gray-600">{item.description}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Urgency Section */}
-      <section className="bg-natura-dark py-16">
-        <div className="container mx-auto max-w-4xl px-4 text-center">
-          <div className="bg-gradient-to-r from-natura-red to-red-700 rounded-2xl p-8 shadow-2xl">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-              ⏰ Oferta por Tempo Limitado!
-            </h2>
-            <p className="text-xl text-red-100 mb-6">
-              Estoque limitado para o Dia dos Namorados. Garante o seu antes que acabe!
-            </p>
-            
-            {/* Pricing in Urgency Section */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 inline-block">
-              <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="text-red-200 line-through text-xl">R$ 316,70</span>
-                <Badge className="bg-natura-gold text-natura-dark px-3 py-1">
-                  37% OFF
-                </Badge>
-              </div>
-              <div className="text-5xl font-bold text-natura-gold">
-                R$ 199,90
-              </div>
-              <p className="text-red-100 text-sm mt-1">
-                Economize R$ 116,80
-              </p>
-            </div>
-            
-            <Button 
-              onClick={handleCTAClick}
-              className="bg-natura-gold text-natura-dark hover:bg-natura-gold/90 text-xl font-bold px-8 py-4 h-auto shadow-lg animate-pulse-gold"
-            >
-              GARANTIR MEU KIT AGORA
-              <Heart className="ml-2 w-6 h-6" />
-            </Button>
-            
-            <p className="text-red-200 text-sm mt-4">
-              * Enquanto durarem os estoques
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="bg-natura-dark py-8 text-center">
         <div className="container mx-auto px-4">
           <p className="text-white/80">
-            © 2024 Natura. Todos os direitos reservados.
+            © 2025 Natura. Todos os direitos reservados.
           </p>
         </div>
       </footer>
