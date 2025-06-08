@@ -11,7 +11,7 @@ const LandingPage = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = '5511999999999';
+    const phoneNumber = '5511993846894';
     const message = encodeURIComponent('Olá! Tenho interesse no Kit Natura Homem Sagaz com desconto especial.');
     window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
