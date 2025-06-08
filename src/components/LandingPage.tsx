@@ -71,9 +71,25 @@ const LandingPage = () => {
                     <h3 className="text-2xl font-bold text-natura-dark mb-2">
                       Garante o Seu Agora!
                     </h3>
-                    <p className="text-gray-600 font-medium">
+                    <p className="text-gray-600 font-medium mb-4">
                       Oferta especial por tempo limitado
                     </p>
+                    
+                    {/* Pricing Section */}
+                    <div className="bg-gradient-to-r from-natura-red/10 to-red-100 rounded-lg p-4 mb-4">
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <span className="text-gray-500 line-through text-lg">R$ 316,70</span>
+                        <Badge className="bg-natura-red text-white px-2 py-1 text-sm">
+                          37% OFF
+                        </Badge>
+                      </div>
+                      <div className="text-4xl font-bold text-natura-red">
+                        R$ 199,90
+                      </div>
+                      <p className="text-sm text-gray-600 mt-1">
+                        Economize R$ 116,80
+                      </p>
+                    </div>
                   </div>
                   
                   <Button 
@@ -174,9 +190,25 @@ const LandingPage = () => {
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               ⏰ Oferta por Tempo Limitado!
             </h2>
-            <p className="text-xl text-red-100 mb-8">
+            <p className="text-xl text-red-100 mb-6">
               Estoque limitado para o Dia dos Namorados. Garante o seu antes que acabe!
             </p>
+            
+            {/* Pricing in Urgency Section */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 inline-block">
+              <div className="flex items-center justify-center gap-3 mb-2">
+                <span className="text-red-200 line-through text-xl">R$ 316,70</span>
+                <Badge className="bg-natura-gold text-natura-dark px-3 py-1">
+                  37% OFF
+                </Badge>
+              </div>
+              <div className="text-5xl font-bold text-natura-gold">
+                R$ 199,90
+              </div>
+              <p className="text-red-100 text-sm mt-1">
+                Economize R$ 116,80
+              </p>
+            </div>
             
             <Button 
               onClick={handleCTAClick}
