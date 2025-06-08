@@ -13,7 +13,10 @@ export default {
 	theme: {
 		container: {
 			center: true,
-			padding: '2rem',
+			padding: {
+				DEFAULT: '1rem',
+				sm: '2rem'
+			},
 			screens: {
 				'2xl': '1400px'
 			}
@@ -74,6 +77,15 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			fontSize: {
+				'2xs': ['0.625rem', '0.75rem'],
+			},
+			spacing: {
+				'safe-top': 'env(safe-area-inset-top)',
+				'safe-bottom': 'env(safe-area-inset-bottom)',
+				'safe-left': 'env(safe-area-inset-left)',
+				'safe-right': 'env(safe-area-inset-right)',
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
@@ -113,10 +125,10 @@ export default {
 				},
 				'pulse-gold': {
 					'0%, 100%': {
-						boxShadow: '0 0 0 0 hsl(var(--natura-gold))'
+						boxShadow: '0 0 0 0 hsl(var(--natura-gold) / 0.4)'
 					},
 					'50%': {
-						boxShadow: '0 0 0 10px transparent'
+						boxShadow: '0 0 0 10px hsl(var(--natura-gold) / 0)'
 					}
 				}
 			},

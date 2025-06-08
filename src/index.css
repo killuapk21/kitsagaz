@@ -99,6 +99,19 @@
 
   body {
     @apply bg-background text-foreground;
+    font-display: swap;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Optimize images */
+  img {
+    height: auto;
+    max-width: 100%;
   }
 }
 
@@ -130,4 +143,30 @@
   .bg-natura-dark {
     background-color: hsl(var(--natura-dark));
   }
+
+  /* Performance optimizations */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.4s ease-out;
+    will-change: transform, opacity;
+  }
+
+  .animate-pulse-gold {
+    animation: pulse-gold 2s infinite;
+    will-change: box-shadow;
+  }
+
+  /* Mobile-first responsive utilities */
+  @media (max-width: 640px) {
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
 }
+
+/* Remove unused App.css styles */
