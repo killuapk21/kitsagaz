@@ -1,39 +1,14 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Heart, Gift, Star, Clock, CheckCircle2, Phone, ArrowRight } from 'lucide-react';
-import { toast } from '@/hooks/use-toast';
+import { Heart, Gift, Star, Clock, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const LandingPage = () => {
-  const [whatsapp, setWhatsapp] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!whatsapp) {
-      toast({
-        title: "WhatsApp obrigatório",
-        description: "Por favor, insira seu número de WhatsApp",
-        variant: "destructive"
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    // Simular envio
-    setTimeout(() => {
-      toast({
-        title: "Sucesso!",
-        description: "Em breve você receberá mais informações no seu WhatsApp",
-      });
-      setIsSubmitting(false);
-      // Redirecionar para WhatsApp
-      window.open(`https://wa.me/5511999999999?text=Olá! Tenho interesse no Kit Natura Homem Sagaz para o Dia dos Namorados. WhatsApp: ${whatsapp}`, '_blank');
-    }, 1500);
+  const handleCTAClick = () => {
+    // TODO: Replace this URL with your affiliate link
+    window.open('https://sua-url-de-afiliado-aqui.com', '_blank');
   };
 
   const benefits = [
@@ -89,47 +64,28 @@ const LandingPage = () => {
                 </Badge>
               </div>
 
-              {/* CTA Form */}
+              {/* CTA Card */}
               <Card className="bg-white/95 backdrop-blur-sm shadow-2xl animate-scale-in">
                 <CardContent className="p-6">
-                  <div className="text-center mb-4">
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-natura-dark mb-2">
                       Garante o Seu Agora!
                     </h3>
                     <p className="text-gray-600 font-medium">
-                      Receba informações exclusivas no seu WhatsApp
+                      Oferta especial por tempo limitado
                     </p>
                   </div>
                   
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="relative">
-                      <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                      <Input
-                        type="tel"
-                        placeholder="Seu WhatsApp (11) 99999-9999"
-                        value={whatsapp}
-                        onChange={(e) => setWhatsapp(e.target.value)}
-                        className="pl-12 h-12 text-lg border-2 border-gray-200 focus:border-natura-red"
-                        required
-                      />
-                    </div>
-                    
-                    <Button 
-                      type="submit" 
-                      disabled={isSubmitting}
-                      className="w-full h-14 text-lg font-bold luxury-gradient hover:bg-natura-red/90 text-white shadow-lg animate-pulse-gold"
-                    >
-                      {isSubmitting ? 'Enviando...' : (
-                        <>
-                          QUERO COMPRAR COM DESCONTO
-                          <ArrowRight className="ml-2 w-5 h-5" />
-                        </>
-                      )}
-                    </Button>
-                  </form>
+                  <Button 
+                    onClick={handleCTAClick}
+                    className="w-full h-14 text-lg font-bold luxury-gradient hover:bg-natura-red/90 text-white shadow-lg animate-pulse-gold"
+                  >
+                    COMPRAR COM DESCONTO ESPECIAL
+                    <ArrowRight className="ml-2 w-5 h-5" />
+                  </Button>
                   
                   <p className="text-xs text-gray-500 text-center mt-3">
-                    🔒 Seus dados estão seguros conosco
+                    🔒 Compra 100% segura e garantida
                   </p>
                 </CardContent>
               </Card>
@@ -223,7 +179,7 @@ const LandingPage = () => {
             </p>
             
             <Button 
-              onClick={() => document.querySelector('form')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={handleCTAClick}
               className="bg-natura-gold text-natura-dark hover:bg-natura-gold/90 text-xl font-bold px-8 py-4 h-auto shadow-lg animate-pulse-gold"
             >
               GARANTIR MEU KIT AGORA
